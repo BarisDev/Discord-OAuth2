@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        .calendar{
+            background-color: black;
+            color: white;
+            float: left;
+            
+            height: 100%;
+        }
+        .days{
+            color: green;
+            background-color: fuchsia;
+            width: 100%;
+        }
+        .day_label{
+            background-color: white;
+            color: violet;
+            float: left;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .dis_bolme {
+            background-color: #666
+        }
+        .infobar{
+            float:left;
+            width: 25%;
+            height: 100%;
+            border:#CCC solid 1px;
+            background-color: #F00;
+        }
+        .circleimage{
+            border-radius:50%;
+        }
+        .infotext{
+            font-size: 30px;
+            text-align: center;
+        }
+        .ustmargin{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .listedButtons{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="dis_bolme">
+        <div class="infobar">
+            <div class="ustmargin" ><img src = "<%- Image %>" class="circleimage"></div>
+            <div class="infotext"><b><%- Username %></b></div>
+            <div class="listedButtons">
+                <select class="select" id="guildselect" name="guild" onselect="openCalendar()">
+                    <option value="" disabled selected>Select your server</option>
+                        <% for(var i = 0; i < Guildname.length; i++) { %>
+                            <option value="guildname"><%= Guildname[i] %></option>
+                        <% } %>
+                </select>
+            </div>
+            
+            <p>Dil: <%- Language %></p>
+        </div>
+        <div class="calendar">
+            <table width="100px">
+                <tr>
+                    <td>TEST</td>
+                    <td>TEST2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
